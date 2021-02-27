@@ -14,7 +14,7 @@ NC='\033[0m' # No Color
 
 
 #Welcome message
-apt-get update && apt-get upgrade -y
+yum update && yum upgrade -y
 clear
 echo -e "Welcome to WordPress & LAMP stack installation and configuration wizard!
 First of all, we going to check all required packeges..."
@@ -32,7 +32,7 @@ NANO=$(dpkg-query -W -f='${Status}' nano 2>/dev/null | grep -c "ok installed")
   if [ $(dpkg-query -W -f='${Status}' nano 2>/dev/null | grep -c "ok installed") -eq 0 ];
   then
     echo -e "${YELLOW}Installing nano${NC}"
-    apt-get install nano --yes;
+    yum install nano --yes;
     elif [ $(dpkg-query -W -f='${Status}' nano 2>/dev/null | grep -c "ok installed") -eq 1 ];
     then
       echo -e "${GREEN}nano is installed!${NC}"
@@ -42,7 +42,7 @@ ZIP=$(dpkg-query -W -f='${Status}' zip 2>/dev/null | grep -c "ok installed")
   if [ $(dpkg-query -W -f='${Status}' zip 2>/dev/null | grep -c "ok installed") -eq 0 ];
   then
     echo -e "${YELLOW}Installing zip${NC}"
-    apt-get install zip --yes;
+    yum install zip --yes;
     elif [ $(dpkg-query -W -f='${Status}' zip 2>/dev/null | grep -c "ok installed") -eq 1 ];
     then
       echo -e "${GREEN}zip is installed!${NC}"
@@ -52,7 +52,7 @@ MC=$(dpkg-query -W -f='${Status}' mc 2>/dev/null | grep -c "ok installed")
   if [ $(dpkg-query -W -f='${Status}' mc 2>/dev/null | grep -c "ok installed") -eq 0 ];
   then
     echo -e "${YELLOW}Installing mc${NC}"
-    apt-get install mc --yes;
+    yum install mc --yes;
     elif [ $(dpkg-query -W -f='${Status}' mc 2>/dev/null | grep -c "ok installed") -eq 1 ];
     then
       echo -e "${GREEN}mc is installed!${NC}"
@@ -62,7 +62,7 @@ HTOP=$(dpkg-query -W -f='${Status}' htop 2>/dev/null | grep -c "ok installed")
   if [ $(dpkg-query -W -f='${Status}' htop 2>/dev/null | grep -c "ok installed") -eq 0 ];
   then
     echo -e "${YELLOW}Installing htop${NC}"
-    apt-get install htop --yes;
+    yum install htop --yes;
     elif [ $(dpkg-query -W -f='${Status}' htop 2>/dev/null | grep -c "ok installed") -eq 1 ];
     then
       echo -e "${GREEN}htop is installed!${NC}"
@@ -72,7 +72,7 @@ FAIL2BAN=$(dpkg-query -W -f='${Status}' fail2ban 2>/dev/null | grep -c "ok insta
   if [ $(dpkg-query -W -f='${Status}' fail2ban 2>/dev/null | grep -c "ok installed") -eq 0 ];
   then
     echo -e "${YELLOW}Installing fail2ban${NC}"
-    apt-get install fail2ban --yes;
+    yum install fail2ban --yes;
     elif [ $(dpkg-query -W -f='${Status}' fail2ban 2>/dev/null | grep -c "ok installed") -eq 1 ];
     then
       echo -e "${GREEN}fail2ban is installed!${NC}"
@@ -82,7 +82,7 @@ APACHE2=$(dpkg-query -W -f='${Status}' apache2 2>/dev/null | grep -c "ok install
   if [ $(dpkg-query -W -f='${Status}' apache2 2>/dev/null | grep -c "ok installed") -eq 0 ];
   then
     echo -e "${YELLOW}Installing apache2${NC}"
-    apt-get install apache2 php5 --yes;
+    yum install apache2 php5 --yes;
     elif [ $(dpkg-query -W -f='${Status}' apache2 2>/dev/null | grep -c "ok installed") -eq 1 ];
     then
       echo -e "${GREEN}apache2 is installed!${NC}"
@@ -92,7 +92,7 @@ MYSQL=$(dpkg-query -W -f='${Status}' mysql-server 2>/dev/null | grep -c "ok inst
   if [ $(dpkg-query -W -f='${Status}' mysql-server 2>/dev/null | grep -c "ok installed") -eq 0 ];
   then
     echo -e "${YELLOW}Installing mysql-server${NC}"
-    apt-get install mysql-server --yes;
+    yum install mysql-server --yes;
     elif [ $(dpkg-query -W -f='${Status}' mysql-server 2>/dev/null | grep -c "ok installed") -eq 1 ];
     then
       echo -e "${GREEN}mysql-server is installed!${NC}"
@@ -102,7 +102,7 @@ PHP5CURL=$(dpkg-query -W -f='${Status}' php5-curl 2>/dev/null | grep -c "ok inst
   if [ $(dpkg-query -W -f='${Status}' php5-curl 2>/dev/null | grep -c "ok installed") -eq 0 ];
   then
     echo -e "${YELLOW}Installing php5-curl${NC}"
-    apt-get install php5-curl --yes;
+    yum install php5-curl --yes;
     elif [ $(dpkg-query -W -f='${Status}' php5-curl 2>/dev/null | grep -c "ok installed") -eq 1 ];
     then
       echo -e "${GREEN}php5-curl is installed!${NC}"
@@ -112,7 +112,7 @@ PHPMYADMIN=$(dpkg-query -W -f='${Status}' phpmyadmin 2>/dev/null | grep -c "ok i
   if [ $(dpkg-query -W -f='${Status}' phpmyadmin 2>/dev/null | grep -c "ok installed") -eq 0 ];
   then
     echo -e "${YELLOW}Installing phpmyadmin${NC}"
-    apt-get install phpmyadmin --yes;
+    yum install phpmyadmin --yes;
     elif [ $(dpkg-query -W -f='${Status}' phpmyadmin 2>/dev/null | grep -c "ok installed") -eq 1 ];
     then
       echo -e "${GREEN}phpmyadmin is installed!${NC}"
@@ -122,7 +122,7 @@ WGET=$(dpkg-query -W -f='${Status}' wget 2>/dev/null | grep -c "ok installed")
   if [ $(dpkg-query -W -f='${Status}' wget 2>/dev/null | grep -c "ok installed") -eq 0 ];
   then
     echo -e "${YELLOW}Installing wget${NC}"
-    apt-get install wget --yes;
+    yum install wget --yes;
     elif [ $(dpkg-query -W -f='${Status}' wget 2>/dev/null | grep -c "ok installed") -eq 1 ];
     then
       echo -e "${GREEN}wget is installed!${NC}"
@@ -132,7 +132,7 @@ CURL=$(dpkg-query -W -f='${Status}' curl 2>/dev/null | grep -c "ok installed")
   if [ $(dpkg-query -W -f='${Status}' curl 2>/dev/null | grep -c "ok installed") -eq 0 ];
   then
     echo -e "${YELLOW}Installing curl${NC}"
-    apt-get install curl --yes;
+    yum install curl --yes;
     elif [ $(dpkg-query -W -f='${Status}' curl 2>/dev/null | grep -c "ok installed") -eq 1 ];
     then
       echo -e "${GREEN}curl is installed!${NC}"
